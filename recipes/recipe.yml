@@ -24,11 +24,16 @@ modules:
       - hyprland
       - hyprshot
       - hyprpicker
-      - hyprpanel
       - hyprpaper
       - hyprlock
       - hypridle
       - hyprpolkitagent
+  - type: script
+    snippets:
+      - "dnf5 swap -y --repo=copr:copr.fedorainfracloud.org:solopasha:hyprland astal astal-io"
+  - type: rpm-ostree
+    install:
+      - hyprpanel
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -51,6 +56,9 @@ modules:
         - io.missioncenter.MissionCenter
         - org.prismlauncher.PrismLauncher
         - io.github.pwr_solaar.solaar
+        - net.shadps4.shadPS4
+        - org.vinegarhq.Sober
+        - org.godotengine.Godot
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages

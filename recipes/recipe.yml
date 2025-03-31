@@ -51,7 +51,6 @@ modules:
         - org.prismlauncher.PrismLauncher
         - io.github.pwr_solaar.solaar
         - net.shadps4.shadPS4
-        - org.vinegarhq.Sober
         - org.godotengine.Godot
       remove:
         - org.gnome.eog

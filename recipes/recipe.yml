@@ -59,7 +59,7 @@ modules:
 
   - type: script
     snippets:
-      - "dnf5 swap -y --repo=copr:copr.fedorainfracloud.org:solopasha:hyprland astal astal-io"
+      - "dnf5 swap --remove -y --repo=copr:copr.fedorainfracloud.org:solopasha:hyprland astal astal-io"
 
   - type: rpm-ostree
     install:

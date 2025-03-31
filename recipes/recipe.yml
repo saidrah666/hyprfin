@@ -1,4 +1,3 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: hyprfin
@@ -28,12 +27,7 @@ modules:
       - hyprlock
       - hypridle
       - hyprpolkitagent
-  - type: script
-    snippets:
-      - "dnf5 swap -y --repo=copr:copr.fedorainfracloud.org:solopasha:hyprland astal astal-io"
-  - type: rpm-ostree
-    install:
-      - hyprpanel
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -61,7 +55,15 @@ modules:
         - org.godotengine.Godot
       remove:
         - org.gnome.eog
-    user: {} # Also add Flathub user repo, but no user packages
+
+    user: {}
+
+  - type: script
+    snippets:
+      - "dnf5 swap -y --repo=copr:copr.fedorainfracloud.org:solopasha:hyprland astal astal-io"
+
+  - type: rpm-ostree
+    install:
+      - hyprpanel
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-

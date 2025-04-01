@@ -24,6 +24,7 @@ modules:
       - hyprpolkitagent
       - cosmic-desktop
       - steam
+      - libva-2.22.0-3.fc41
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)

@@ -17,11 +17,18 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-%OS_VERSION%/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
       # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-fedora-%OS_VERSION%.repo
-      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo
+      # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/fedora-%OS_VERSION%/bieszczaders-kernel-cachyos-addons-fedora-%OS_VERSION%.repo cahcy kernel not working
     install:
       - micro
       - starship
       - hyprpolkitagent
+      - hyprland
+      - hyprpaper
+      - hyprlock
+      - hypridle
+      - hyprshot
+      - pyprland
+      - hyprnome
       - cosmic-desktop
 
   - type: default-flatpaks

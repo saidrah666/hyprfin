@@ -52,6 +52,8 @@ modules:
         - io.github.pwr_solaar.solaar
         - net.shadps4.shadPS4
         - org.godotengine.Godot
+        - org.libreoffice.LibreOffice
+        - io.github.dvlv.boxbuddyrs
       remove:
         - org.gnome.eog
 

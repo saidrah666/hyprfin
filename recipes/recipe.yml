@@ -54,21 +54,8 @@ modules:
 
   - type: script
     snippets:
-      - name: enable-rpmfusion
-        runs: |
-          dnf install -y \
-            https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-            https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-          dnf config-manager --enable fedora-cisco-openh264
-
-      - name: install-steam
-        runs: dnf install -y steam
-
-  #- type: script
-    # snippets:
-    #   - name: replace-astal
-    #     runs: |
-    #       dnf5 swap -y --repo=copr:copr.fedorainfracloud.org:solopasha:hyprland astal astal-io
-    #       dnf5 -y install hyprpanel
-
+      - "dnf install -y \ https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \ https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+      - "dnf config-manager --enable fedora-cisco-openh264"
+      - "dnf install -y steam"
+      
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
